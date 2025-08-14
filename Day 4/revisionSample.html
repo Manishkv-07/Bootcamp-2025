@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Revision</title>
+        <script>
+                 function searchchar(){
+                 var anime = ['naruto','onepeice','dragonball','hunter','bleach']
+                 var search = document.getElementById('search').value
+                 console.log(`Search ${search}`)
+
+                 anime.forEach((char) => {  // here char is a variable which defines a item in the array
+                     if( char === search){
+                        console.log("Available")
+                        var animeTag = document.createElement('h1') // create an h1 tag which is not visible to web-page
+                        animeTag.setAttribute("id" , char) //create an id <h1 id = "" > like this inside the "" will be the items of an array
+                        animeTag.innerHTML = char             //  <h1 id = "" > char </h1> item of an array is written in between the ><
+                        document.body.appendChild(animeTag);  // it will make it visible to the user on the web-page
+                     } else{
+                        console.log("not avaialble")
+                     }
+                 })
+                }
+        </script>
+    </head>
+     <body>
+          <form onload = "searchchar()">
+             <label for = "search" >Search</label>
+             <input id = "search" type = "text" placeholder = "Search" />
+          </form>
+          <button onclick = "searchchar()" >Search</button>
+     </body>
+</html>

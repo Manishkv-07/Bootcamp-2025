@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title>Student Detail</title>
+        <script>
+             var students = []
+             function studentDetail(){
+                   
+                var nameNode = document.getElementById("name").value
+                var  usnNode = document.getElementById("usn").value
+                var numberNode = document.getElementById("number").value
+                var addressNode = document.getElementById("cgp").value
+        
+                var student = {
+                    name : nameNode,
+                    usn : usnNode,
+                    number : numberNode,
+                    cgp: addressNode
+                }
+               
+                students.push(student)
+              console.log(student)
+
+                //create a container 
+                let studentTag = document.createElement('div')
+                 studentTag.setAttribute("id" ," studentList")
+                studentTag.style = "background-color : white;"
+                document.body.appendChild(studentTag)
+
+                // create and add the items
+                
+                let nameNode1 = document.createElement('h3')
+                   nameNode1.style = "color :black;"
+                   nameNode1.innerHTML ="Name : " + student.name
+                   studentTag.appendChild(nameNode1)
+                   
+
+                let usnTag = document.createElement('p')
+                usnTag.innerHTML ="USN : " + student.usn
+                studentTag.appendChild(usnTag)
+
+                let phoneTag = document.createElement('p')
+                phoneTag.innerHTML ="Number : " + student.number
+                studentTag.appendChild(phoneTag)
+
+                let cgpTag = document.createElement('p')
+                cgpTag.innerHTML ="CGP : " + student.cgp
+                studentTag.appendChild(cgpTag)
+
+             }
+
+        </script>
+    </head>
+     <body  > 
+         <center>
+            
+       <div  style  = "width : 400px; height : 500px; background-color: lightblue; border :4px solid black; display:flex; align-items:center; justify-content: center;">
+          <div  style = " margin-top : 20px; margin-bottom: 20px;">
+            <img width = 200px; height="200px;"; src = "https://media.istockphoto.com/id/2210211354/photo/3d-purple-user-profile-icon-on-lavender-background.jpg?s=612x612&w=is&k=20&c=BrqFgCU07Cjk9OWezLNIFmAuPWAv2BynuLti_wlrfbY=" />
+          <form  onload = "studentDetail()" >
+            <div style = "margin : 20px;  border : 2px solid black; border-radius: 5px;">
+                  <label   for = "name" >Student Name</label>
+                   <input id = "name" type = "text" placeholder = "Student Name" /><br>
+            </div>
+             <div style = "margin : 20px; border : 2px solid  black; border-radius: 5px;">
+                   <label   for = "usn" >USN</label>
+                   <input id = "usn" type = "text" pattern="[0-9+()-\s]*" placeholder = "USN" /><br>
+             </div>
+            <div style = "margin : 20px;  border : 2px solid black; border-radius: 5px;">
+                   <label  for = "number" >Number</label>
+                   <input id = "number" type = "tel" placeholder = "Phone : No" /><br>
+             </div>
+             <div style = "margin : 20px;  border : 2px solid black; border-radius: 5px;">
+                   <label   for = "address" >CGP</label>
+                   <input id = "cgp" type = "tel" placeholder = "CGP" /><br>
+             </div>
+          </form>
+          <button onclick = "studentDetail()" >Submit</button>
+          </div>
+        
+        </div>
+        </center> 
+         
+     </body>
+</html>

@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>Student Details</title>
+        <script>
+              var students = []
+             function printlog(){
+
+               
+                
+                 var nameNode = document.getElementById("student")
+                 var ageNode = document.getElementById("age")
+                 var markNode = document.getElementById("mark")
+                 var interestNode = document.getElementById("interest")
+
+                 var name = nameNode.value
+                 var age = ageNode.value
+                 var mark = markNode.value
+                 var interest = interestNode.value
+
+                 var student = {
+                     name : name,
+                     age : age,
+                     mark : mark, 
+                     interest : interest
+
+                 }
+                 students.push(student)
+                 console.log(student)
+
+             let studentListNode = document.createElement('div')
+             studentListNode.setAttribute("id" ,"studentList")
+             studentListNode.style = "display : flex; background-color: blue; width :400px;" 
+             document.body.appendChild(studentListNode)
+             // 2. Add the items to the list 
+             // Name HTML tag
+              let name1Node = document.createElement('h1')
+              name1Node.style = "color : yellow; font-family : cursive;"
+              name1Node.innerText = student.name
+              studentListNode.appendChild(name1Node)
+             }
+
+        </script>
+    </head>
+      <body>
+          <h1>Student Details</h1>
+          <form onload = "printlog()">
+              <label for = "student">Student Name</label>
+              <input id = "student" type = "text" placeholder="Student Name" /> <br>
+
+              <label for = "age" >Age</label>
+              <input id = "age" type = "tel" placeholder = "Age" /> <br>
+              
+              <label for = "mark" >Mark</label>
+              <input id = "mark" type = "tel" placeholder = "Mark" /> <br>
+
+              <label for = "interest" >Interest</label>
+              <input id = "interest" type = "text" placeholder = "Interest" /> <br>
+
+             
+          </form>
+           <button onclick = "printlog()" >Submit</button>
+      </body>
+</html>

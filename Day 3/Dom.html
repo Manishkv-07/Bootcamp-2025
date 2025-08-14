@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title></title>
+        <script>
+            function onloadData(){
+                var nameNode = document.getElementById("name");
+                //  .innerText 
+                //  console.log(name)
+                //  document.getElementById("name").innerHTML ="How are u doing"
+                nameNode.style = "font-family :cursive"
+                console.log(nameNode)
+
+                nameNode.innerHTML = "How are u "
+
+                var phoneNode = document.createElement("h3")
+                phoneNode.setAttribute("id" ,"phone")
+                phoneNode.innerHTML = "123456789"
+                document.body.appendChild(phoneNode)
+                document.body.removeChild(phoneNode)
+            }
+        </script>
+    </head>
+      <body onload = "onloadData()">
+       <h2 id = "name"></h2>
+        <form>
+            
+        </form>
+      </body>
+</html>

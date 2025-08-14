@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>JS Crash Course</title>
+       
+        
+         <script>
+            //  function greet(){
+            //         name = "raju"
+            //         let age = "34"
+                    
+            //          age = "Twenty"
+            //         console.log(age)
+            //         console.log(age)
+
+            //         if( age == "34"){
+            //             console.log("How are you")
+            //         }
+            //         let count = 0;
+            //         while( count < 100){
+            //             console.log(count)
+            //             count++
+            //         }
+            //  }
+        //   greet()
+        //     console.log(name)
+          function greet(){
+            var cars = ['benz' ,'audi', 'how','maruti','ferrari','porche']
+            console.log(cars)
+            // for(i =0; i<cars.length; i++){
+            //     console.log(cars[i])
+                
+               
+            //     if( cars[i] == 'maruti'){
+            //         console.log("Available")
+            //     }
+            // }
+                // cars.push('nano') // is used to add an element
+                // console.log(cars)
+                // cars.pop() // is used to delete an 
+                // console.log(cars)
+                // cars.shift() // it is used to remove a 0th element of an array
+                // console.log(cars)
+                     var search = document.getElementById(`search`).value
+                     console.log(`User searched ${search}`)
+                    //  var result  = cars.filter((car) => car == search)
+
+
+                cars.forEach((car)=>{
+                    if( car === search){
+                        console.log(car)
+                        console.log("Available")
+                     var carTag = document.createElement('h1')
+                     carTag.setAttribute("id",car)
+                     carTag.innerHTML = car;
+                     document.body.appendChild(carTag);
+                    }else{
+                      console.log("not found")
+                    }
+                    console.log(car)
+                    
+                    
+                })
+          }
+              
+         </script>
+    </head>
+     <body onload = "greet()">
+           <h1 id = "title">JS Crash Course</h1>
+           <label type = "search">Search</label>
+           <input id = "search" type = "text" placeholder = "Search" />
+           <button onclick = "greet()" >Search</button>
+     </body>
+</html>

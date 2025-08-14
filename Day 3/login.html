@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>login</title>
+        <script>
+            
+            function printlog(){
+                    var nameNode = document.getElementById("name");
+                    var emailNode = document.getElementById("email");
+                    var passwordNode = document.getElementById("password");
+                    var ageNode = document.getElementById("age");
+
+
+                      var name = nameNode.value;
+                      var email = emailNode.value;
+                      var password = passwordNode.value;
+                      var age = ageNode.value;
+                      
+                      console.log(`Name ${name}`)
+                      console.log(`Email ${email}`)
+                      console.log(`Password ${password}`)
+                      console.log(`age ${age}`)
+
+                    if(name === "Akshaya" && password === "password"){
+                      console.log('valid user')
+                      alert(`valid user`)
+                      window.location.href = "dom.html";
+                    } else {
+                      alert(`invalid user`)
+                    }
+
+            }
+        </script>
+        
+    </head>
+    <body>
+        
+         <center>
+        <img src = "https://www.freeiconspng.com/thumbs/login-icon/user-login-icon-14.png" />
+          <h1>Login to continue</h1>
+        
+          <form  onload = "printlog()";>
+            <label for="Email">Email:</label>
+             <input id = "email";
+              type ="text";
+              placeholder ="email";
+              />
+             <br />
+              <label for="age">Age</label>
+              <input id = "age";
+               type = "number";
+               placeholder ="Age";
+              />
+              <br/>
+            <label for="username">Username:</label>
+            <input id = "name";
+            type = "text";
+            placeholder = "Full name";
+             />
+             <br/>
+             <label for="password">Password</label>
+             <input id = "password";
+               type = "password";
+               placeholder="Password";
+             />
+             <br/>
+             <button type = "submit" >Submit</button>
+           
+          </form>
+           <!-- <button >Submit</button> -->
+          </center>
+          
+    </body>
+</html>
